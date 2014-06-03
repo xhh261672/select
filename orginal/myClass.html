@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script>
+    //function selectThis(jhkcdm,jxbbh,xkkclx,obj,ind){
+    	// _w_table_td5_font2_Obj = $("#selectList tr:nth-child("+ ind +") td:nth-child(5) p:nth-child(2) font");
+    	// _w_table_td5_font1_Obj = $("#selectList tr:nth-child("+ ind +") td:nth-child(5) p:nth-child(1) font");
+    	// _w_table_td6_button3_Obj = $("#selectList tr:nth-child("+ ind +") td:nth-child(6) .button3");
+	function selectThis(){
+	//selectThis('71013180','71013180201420000','11',this,'6')
+	            	$.ajax({ 
+				            async:false,
+				            type:"post", 
+				            contentType:"application/json", 
+				            url:"http://xk.urp.seu.edu.cn/jw_css/xk/runSelectclassSelectionAction.action?select_jxbbh=71013180201420000&select_xkkclx=11&select_jhkcdm=71013180", 
+				            data:"{}", 
+				            dataType:"json", 
+				            success:function(data){ 
+				            	if(data.rso.isSuccess == 'false'){
+				            		console.log('failed');
+			            		}else{
+				            		alert('已成功选择!');
+				         
+			            		}
+				            }
+				     });
+            }
+
+    function start(){
+    	setInterval(selectThis,5000);
+    }
+
+    setTimeout(start,1000);
+
+</script>
+</head>
+<body onload="selectThis()"></body>
+</html>
