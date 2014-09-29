@@ -6,15 +6,16 @@ function selectThis(){
                     async:false,
                     type:"post", 
                     contentType:"application/json", 
-                    url:"http://xk.urp.seu.edu.cn/jw_css/xk/runSelectclassSelectionAction.action?select_jxbbh=71013180201420000&select_xkkclx=11&select_jhkcdm=71013180", 
+                    url:"http://xk.urp.seu.edu.cn/jw_css/xk/runSelectclassSelectionAction.action?select_jxbbh=71013530201420000&select_xkkclx=11&select_jhkcdm=71013530", 
                     data:"{}", 
                     dataType:"json", 
                     success:function(data){ 
                       if(data.rso.isSuccess == 'false'){
                         console.log('failed');
                       }else{
+                        console.log('select done! success !!');
                         return;
-                        alert('已成功选择!');
+                        //alert('已成功选择!');
                       
                       }
                     }
