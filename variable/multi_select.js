@@ -13,6 +13,7 @@ function selectThis(){
                       if(data.rso.isSuccess == 'false'){
                         console.log('failed');
                       }else{
+                        console.log('select done! success !!');
                         return;
                         //alert('已成功选择!');
                       
